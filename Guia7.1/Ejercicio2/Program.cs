@@ -14,13 +14,14 @@ namespace Ejercicio2
             float masa, cantidadBudines, cantCajas,cantPaquetes,cantpaqueteSobrantes,masaSobrante;
             Console.WriteLine("Ingrese cantidad de masa a producir en kg");
             masa=int.Parse(Console.ReadLine());
-            masa=masa * 1000;
+            masa *= 1000;
             cantidadBudines = masa/55;
             masaSobrante = masa % 55;
             cantPaquetes = cantidadBudines / 12;
             cantpaqueteSobrantes = cantidadBudines % 12;    
             cantCajas = cantPaquetes / 20;
 
+            Console.WriteLine($"Cantidad de budines: {cantidadBudines:F0}"); 
             Console.WriteLine("Cantidad de budines: " + Math.Truncate(cantidadBudines));
             Console.WriteLine("Masa sobrante: " + Math.Truncate(masaSobrante)+ " gr");
             Console.WriteLine("Cantidad de paquetes: " + Math.Truncate(cantPaquetes));
